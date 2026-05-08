@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="scaldasExamen.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- ========== COLORES GLOBALES ========== -->
+            <Color x:Key="PrimaryColor">#5C2D91</Color>
+            <Color x:Key="PrimaryDarkColor">#4A1E7A</Color>
+            <Color x:Key="DangerColor">#D32F2F</Color>
+            <Color x:Key="SecondaryColor">#455A64</Color>
+            <Color x:Key="PageBackgroundColor">#F5F5F5</Color>
+            <Color x:Key="CardBackgroundColor">#FFFFFF</Color>
+
+            <!-- ========== ESTILOS GLOBALES ========== -->
+
+            <!-- Label base -->
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#333333" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <!-- Entry base -->
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="TextColor" Value="#222222" />
+            </Style>
+
+            <!-- Botón primario (morado como en el ejemplo del examen) -->
+            <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="HeightRequest" Value="48" />
+            </Style>
+
+            <!-- Botón secundario -->
+            <Style x:Key="SecondaryButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="HeightRequest" Value="44" />
+            </Style>
+
+            <!-- Botón peligro (cerrar sesión) -->
+            <Style x:Key="DangerButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource DangerColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="HeightRequest" Value="48" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

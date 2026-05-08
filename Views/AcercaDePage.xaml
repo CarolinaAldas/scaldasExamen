@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="scaldasExamen.Views.AcercaDePage"
+             Title="Acerca de"
+             BackgroundColor="{StaticResource PageBackgroundColor}">
+
+    <VerticalStackLayout Spacing="20" Padding="25">
+
+        <Label x:Name="lblUsuarioConectado"
+               Style="{StaticResource LabelStyle}"
+               HorizontalOptions="End" />
+
+        <Label Text="Acerca de"
+               FontSize="22"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource PrimaryColor}" />
+
+        <Frame CornerRadius="12" Padding="20"
+               BackgroundColor="White"
+               BorderColor="{StaticResource PrimaryColor}">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Estudiante:" FontAttributes="Bold" Style="{StaticResource LabelStyle}" />
+                <Label Text="Carolina Aldás Pérez"   Style="{StaticResource LabelStyle}" />
+                <Label Text="Carrera:"              FontAttributes="Bold" Style="{StaticResource LabelStyle}" />
+                <Label Text="Ingeniería en Informática"          Style="{StaticResource LabelStyle}" />
+                <Label Text="Materia:"               FontAttributes="Bold" Style="{StaticResource LabelStyle}" />
+                <Label Text="Desarrollo para Dispositivos Móviles" Style="{StaticResource LabelStyle}" />
+                <Label Text="Docente:"               FontAttributes="Bold" Style="{StaticResource LabelStyle}" />
+                <Label Text="PhD. Renato Toasa"      Style="{StaticResource LabelStyle}" />
+                <Label Text="Universidad Israel"
+                       FontAttributes="Italic"       Style="{StaticResource LabelStyle}" />
+            </VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+
+</ContentPage>

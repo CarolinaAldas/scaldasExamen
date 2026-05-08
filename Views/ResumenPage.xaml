@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="scaldasExamen.Views.ResumenPage"
+             Title="Resumen"
+             BackgroundColor="{StaticResource PageBackgroundColor}">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="25">
+
+            <Label x:Name="lblUsuarioConectado"
+                   Style="{StaticResource LabelStyle}"
+                   HorizontalOptions="End" />
+
+            <Label Text="RESUMEN"
+                   TextColor="{StaticResource PrimaryColor}"
+                   FontSize="22"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold" />
+
+            <!-- GRID 8 filas x 2 columnas -->
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                  ColumnDefinitions="*,*"
+                  RowSpacing="12"
+                  ColumnSpacing="10">
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre:"
+                       Style="{StaticResource LabelStyle}" FontAttributes="Bold" />
+                <Label Grid.Row="0" Grid.Column="1" x:Name="lblNombre"
+                       Style="{StaticResource LabelStyle}" />
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Apellido:"
+                       Style="{StaticResource LabelStyle}" FontAttributes="Bold" />
+                <Label Grid.Row="1" Grid.Column="1" x:Name="lblApellido"
+                       Style="{StaticResource LabelStyle}" />
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Voltiamperio VA:"
+                       Style="{StaticResource LabelStyle}" FontAttributes="Bold" />
+                <Label Grid.Row="2" Grid.Column="1" x:Name="lblVA"
+                       Style="{StaticResource LabelStyle}" />
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Fecha:"
+                       Style="{StaticResource LabelStyle}" FontAttributes="Bold" />
+                <Label Grid.Row="3" Grid.Column="1" x:Name="lblFecha"
+                       Style="{StaticResource LabelStyle}" />
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Ciudad:"
+                       Style="{StaticResource LabelStyle}" FontAttributes="Bold" />
+                <Label Grid.Row="4" Grid.Column="1" x:Name="lblCiudad"
+                       Style="{StaticResource LabelStyle}" />
+
+                <Label Grid.Row="5" Grid.Column="0" Text="Monto Inicial:"
+                       Style="{StaticResource LabelStyle}" FontAttributes="Bold" />
+                <Label Grid.Row="5" Grid.Column="1" x:Name="lblMontoInicial"
+                       Style="{StaticResource LabelStyle}" />
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Cuota Mensual:"
+                       Style="{StaticResource LabelStyle}" FontAttributes="Bold" />
+                <Label Grid.Row="6" Grid.Column="1" x:Name="lblCuotaMensual"
+                       Style="{StaticResource LabelStyle}" />
+
+                <Label Grid.Row="7" Grid.Column="0" Text="Pago Total:"
+                       Style="{StaticResource LabelStyle}" FontAttributes="Bold" />
+                <Label Grid.Row="7" Grid.Column="1" x:Name="lblPagoTotal"
+                       Style="{StaticResource LabelStyle}"
+                       TextColor="Green"
+                       FontAttributes="Bold" />
+
+            </Grid>
+
+            <Button Text="Cerrar Sesión"
+                    Clicked="OnCerrarSesionClicked"
+                    Style="{StaticResource DangerButtonStyle}"
+                    Margin="0,20,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
