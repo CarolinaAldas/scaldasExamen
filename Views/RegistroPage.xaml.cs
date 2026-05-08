@@ -27,13 +27,17 @@ public partial class RegistroPage : ContentPage
             return;
         }
 
-        double montoInicial = CostoUPS * PorcentajeInicial;       // 45.00
-        double resto = CostoUPS - montoInicial;                    // 255.00
-        double cuotaBase = resto / NumCuotas;                      // 85.00
-        double cargoCuota = CostoUPS * PorcentajeCuota;            // 15.00
-        _cuotaMensualCalculada = cuotaBase + cargoCuota;           // 100.00
+        if (!double.TryParse(entryMontoInicial.Text, out double montoInicial) || montoInicial <= 0)
+        {
+            DisplayAlert("Error", "Ingrese un monto inicial válido.", "Aceptar");
+            return;
+        }
 
-        entryMontoInicial.Text = montoInicial.ToString("F2");
+        double resto = CostoUPS - montoInicial;                    // 300 - montoIngresado
+        double cuotaBase = resto / NumCuotas;                      // resto / 3
+        double cargoCuota = CostoUPS * PorcentajeCuota;            // 300 × 5% = 15
+        _cuotaMensualCalculada = cuotaBase + cargoCuota;
+
         entryCuotaMensual.Text = _cuotaMensualCalculada.ToString("F2");
     }
 
@@ -54,7 +58,7 @@ public partial class RegistroPage : ContentPage
         if (_cuotaMensualCalculada == 0)
         { await DisplayAlert("Error", "Primero calcule el pago mensual.", "Aceptar"); return; }
 
-        double montoInicial = CostoUPS * PorcentajeInicial;
+        double.TryParse(entryMontoInicial.Text, out double montoInicial);
         double pagoTotal = montoInicial + (_cuotaMensualCalculada * NumCuotas);
 
         var datos = new ClienteData

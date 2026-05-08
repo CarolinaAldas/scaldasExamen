@@ -21,7 +21,7 @@
                    HorizontalTextAlignment="Center"
                    FontAttributes="Bold" />
 
-            <!-- GRID -->
+            <!-- GRID 1: 2 filas x 3 columnas -->
             <Grid RowDefinitions="Auto,Auto"
                   ColumnDefinitions="*,*,*"
                   RowSpacing="8"
@@ -54,7 +54,7 @@
 
             </Grid>
 
-            <!-- GRID 2-->
+            <!-- GRID 2: 4 filas x 2 columnas -->
             <Grid RowDefinitions="Auto,Auto,Auto,Auto"
                   ColumnDefinitions="*,*"
                   RowSpacing="10"
@@ -85,8 +85,8 @@
                        Style="{StaticResource LabelStyle}" VerticalOptions="Center" />
                 <Entry Grid.Row="2" Grid.Column="1"
                        x:Name="entryMontoInicial"
-                       Placeholder="Monto inicial"
-                       IsReadOnly="True"
+                       Placeholder="Ingrese el monto inicial"
+                       Keyboard="Numeric"
                        Style="{StaticResource EntryStyle}" />
 
                 <Button Grid.Row="3" Grid.Column="0"
@@ -101,7 +101,7 @@
 
             </Grid>
 
-            <!-- Botón Ver Resumen  -->
+            <!-- Botón Ver Resumen (fuera del Grid) -->
             <Button Text="Ver Resumen"
                     Clicked="OnVerResumenClicked"
                     Style="{StaticResource PrimaryButtonStyle}"
